@@ -1,8 +1,8 @@
 import java.util.concurrent.atomic.AtomicReference
 
 
-// Note: no memory-allocation ABA problem possible in PL with garbage collection,
-// so here no need to implement counters as stated in the paper (http://www.cs.rochester.edu/~scott/papers/1996_PODC_queues.pdf)
+// Note: no memory-allocation ABA problem possible in programming language with garbage collection,
+// here no need to implement counters as stated in the paper (http://www.cs.rochester.edu/~scott/papers/1996_PODC_queues.pdf)
 // explanation is here: https://stackoverflow.com/questions/42854116/why-does-automatic-garbage-collection-eliminate-aba-problems
 // So we don't need `AtomicStampedReference` class because we are running CAS on `Node` addresses and not on `Node::element` values
 
